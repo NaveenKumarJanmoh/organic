@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div class="logo">
+                    <h1><a href="#" class="nav__logo">COORGANICA</a></h1>
+                    <img src="https://tinyurl.com/yxcwnhmq"/>
+                </div>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#" class="nav__link active">Title</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Title</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Title</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Title</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="banner_image">
+            <div class="banner_content">
+                <h1>Welcome to <span>COORGANICA</span>
+                </h1>
+                <i><p style="color: green;">a organic world a happy world</p></i>
+                <br/>
+                <p id="type_"></p>
+            </div>
+        </div>
+
+        <!--===== MAIN JS =====-->
+        <script src="js/main.js"></script>
+
+
+        <script>
+            var i = 0;
+            var text = '....Daily quotes are here....';
+            var speed = 200;
+            
+            function typetext() {
+              if (i < text.length) {
+                document.getElementById("type_").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typetext, speed);
+              }
+            }
+            typetext();
+        </script>
+    </body>
+</html>
