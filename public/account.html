@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/common.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    <script src="dist/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="dist/firebaseui.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="dist/account.css" />
+    <link type="text/css" rel="stylesheet" href="css/index.css" />
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+	
+	<script>
+	  // Initialize Firebase
+      const firebaseConfig = {
+      apiKey: "AIzaSyC852wS24dvX4wUnRtAO3WN2CM25fKTjLg",
+      authDomain: "email-verify-297a4.firebaseapp.com",
+      projectId: "email-verify-297a4",
+      storageBucket: "email-verify-297a4.appspot.com",
+      messagingSenderId: "573746900321",
+      appId: "1:573746900321:web:84a28382cba7d0d150a920",
+      measurementId: "G-KCYSNR2HQG"
+    };
+    firebase.initializeApp(firebaseConfig);
+	</script>
+  
+  <link href="css/account.css" rel="stylesheet" type="text/css" media="screen" />
+  <link rel="stylesheet" href="css/index.css" type="text/css" media="screen" />
+</head>
+<body>
+     <!--===== HEADER =====-->
+     <header class="l-header">
+        <nav class="nav bd-grid">
+            <div class="logo">
+                <h1><a href="#" class="nav__logo">COORGANICA</a></h1>
+                <img src="https://tinyurl.com/yxcwnhmq"/>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li id="profile" class="nav__item"><a href="http://localhost:1000/your_account.html" class="nav__link">Your Account</a></li>
+                    <li id="profile" class="nav__item"><a href="#" class="nav__link">Cart</a></li>
+                    <li id="sign-out" class="nav__item"><a href="#" class="nav__link">Sign out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="container">
+      <div id="loading"></div>
+      <div id="loaded" class="hidden">
+        <div id="main">
+          <div id="user-signed-in" class="hidden">
+            <div id="user-info">
+              <div id="photo-container">
+                <img id="photo">
+              </div>
+              <div id="name"></div>
+              <div id="email"></div>
+              <div id="phone"></div>
+              <div id="is-new-user"></div>
+              <div class="clearfix"></div>
+            </div>
+              <!--<button id="delete-account">Delete account</button>-->
+          </div>
+          <div id="user-signed-out" class="hidden">
+            
+            <!-- Write your comments here -->
+            <div id="firebaseui-spa">
+              <div id="firebaseui-container" class="firebase"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="button_item_div" class="button_item_div">
+      <form action="/category/feeling festival" method="POST" name="type"><button type="submit"><img src="https://tinyurl.com/y56gb2o4"><p>feeling festival</p></button>
+      </form>
+      <form action="/category/party time" method="POST" name="type"><button><img src="https://tinyurl.com/yy6f3dm8"><p>party time</p></button>
+      </form>
+      <form action="/category/gift studio" method="POST" name="type"><button><img src="https://tinyurl.com/yxh4zwtx"><p>gift studio</p></button>
+      </form>
+      <form action="/category/party time" method="POST" name="type"><button><img src="https://tinyurl.com/y5shfxt6"><p>party time</p></button>
+      </form>
+      <form action="/category/secret garden" method="POST" name="type"><button><img src="https://tinyurl.com/yyqy966j"><p>secret garden</p></button>
+      </form>
+      <form action="/category/home sweet home" method="POST" name="type"><button><img src="https://tinyurl.com/y2ekuq8x"><p>home sweet home</p></button>
+      </form>
+      <form action="/category/kitchen up" method="POST" name="type"><button><img src="https://tinyurl.com/y5zxdjjq"><p>kitchen up</p></button>
+      </form>
+    </div>
+
+
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <footer class="footer_sec">
+        <h4>Useful Links</h4>
+        <div class="line_div"></div>
+        <ul class="uselink">
+            <li><a href="#">Sell on COORGANICA</li></a>
+            <li><a href="#">About us</li></a>
+            <li><a href="#">Contact Us</li></a>
+            <li><a href="#">Privacy Policy</li>
+            <li><a href="#">Terms & Conditions</li></a>
+            <li><a href="#">Return Policy</li></a>
+        </ul><br/><br/>
+        <ul class="f_social">
+            <li><a href="#"><i class="fa fa-github"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+        </ul><br/><br/><br/><br/>
+        <h4>Others</h4>
+        <div class="line_div"></div>
+        <ul class="others">
+            <li><a href="#">Title</li></a>
+            <li><a href="#">Title</li></a>
+            <li><a href="#">Title</li></a>
+            <li><a href="#">Title</li></a>
+            <li><a href="#">Title</li></a>
+            <li><a href="#">Title</li></a>
+        </ul><br/><br/><br/><br/>
+        <h4>Payment Options</h4>
+        <div class="line_div"></div>
+        <ul class="pay_ops">
+            <li>
+                <a href="#">
+                    <img src="https://tinyurl.com/y2kzczak" alt="" width="38">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://tinyurl.com/y25avyul" alt="" width="90">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://tinyurl.com/y435obz3" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://tinyurl.com/y4u86tg7" alt="" width="102">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://tinyurl.com/y6nymyc3" alt="" width="77">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://tinyurl.com/y2pkjsv7" alt="">
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <br/><br/><br/><br/><br/><br/>
+        <!--===== MAIN JS =====-->
+    <script src="js/account.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

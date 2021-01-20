@@ -27,11 +27,11 @@ body{
   font-weight: 500;
 }
 
-h1,p,ul{
+h1,p,.nav__menu ul{
   margin: 0;
 }
 
-ul{
+.nav__menu ul{
   padding: 0;
   list-style: none;
 }
@@ -58,6 +58,7 @@ a{
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
+  background-color: white;
   box-shadow: 2px 2px 20px rgba(90,118,253,0.13);
   height: 85px;
 }
@@ -102,11 +103,7 @@ a{
 }
 
 .nav__close, .nav__link, .nav__logo, .nav__toggle{
-  color: green;
-}
-
-.nav__link:hover{
-  color: #7fac6e;
+  color: #00b29a;
 }
 
 .nav__toggle{
@@ -154,7 +151,7 @@ a{
 
 .banner_content{
 	text-align: center;
-	margin-top:300px;
+  margin-top:300px;
 }
 
 .banner_content h1{
@@ -163,7 +160,7 @@ a{
 }
 
 .banner_content h1 span{
-	color: green;
+	color: #00b29a;
 }
 
 .logo img{
@@ -171,4 +168,41 @@ a{
   position: absolute;
   margin-left: 110px;
     
+}
+
+.footer_sec{
+  margin-left: 50px;
+}
+.footer_sec h4{
+  color: gray;
+}
+.footer_sec ul{
+  margin-left: -65px;
+}
+.footer_sec ul li{
+  list-style: none;
+  float: left;
+  padding: 10px 25px;
+}
+.footer_sec .other ul li,.footer_sec .uselink ul li{
+  padding: 10px 25px;
+}
+.footer_sec ul li a{
+  color: #525252;
+  font-size: 14px;
+}
+.f_social a{
+  font-size: 25px !important;
+  color: #00b29a !important;
+}
+.line_div{
+  width: 90%;
+  border-top: 1px solid lightgrey;
+}
+
+.nav__item form button{
+  background: none;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
 }

@@ -1,0 +1,64 @@
+
+  body {
+    margin: 0;
+  }
+  
+  #container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 150px;
+  }
+  
+  .clearfix {
+    clear: both;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #user-info {
+    border: none;
+    clear: both;
+    margin: 0 auto 20px;
+    max-width: 400px;
+    padding: 10px;
+    text-align: left;
+  }
+  #photo{
+    width: 50px;
+  }
+  .button_item_div form{
+    float: left;
+  }
+  .button_item_div form button{
+    cursor: pointer;
+    padding: 0px;
+    background: none;
+    border:none;
+    box-shadow:0 2px 6px rgba(0,0,0,0.15);
+    width: 150px;
+    height: 150px;
+    margin: 10px 20px;
+  }
+  .button_item_div form button img{
+    width: 100px;
+    height: auto;
+  }
+  .button_item_div form button p{
+    font-size: 16px;
+    height: 20px;
+    color:  #00b29a;
+  }
+   
+  .button form{
+    float: left;
+  }
+  .nav__list form button{
+    text-align: left !important;
+    margin-left: -8px;
+  }
+  .firebase{
+    margin-bottom: -200px;
+  }

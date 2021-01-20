@@ -1,0 +1,28 @@
+.your_acc{
+    margin: 150px 100px 0 220px;
+  }
+  .your_acc button{
+    float: left;
+    margin: 0 30px 30px 0;
+    padding: 15px;
+    width: 280px;
+    height: 85px;
+    border-radius: 10px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.15);
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+  }
+  .your_acc button h3{
+    margin: 0;
+    color: #525252;
+  }
+  .your_acc button p{
+    color: #525252;
+  }
+  .your_acc button span{
+    position: absolute;
+    margin-left: 220px;
+    margin-top: -10px;
+  }

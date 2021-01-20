@@ -6,7 +6,8 @@
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- ===== CSS ===== -->
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/items.css">
     </head>
     <body>
         <!--===== HEADER =====-->
@@ -27,26 +28,45 @@
                     </div>
 
                     <ul class="nav__list">
-                        <li id="profile" class="nav__item"><a href="account.html" class="nav__link">Account</a></li>
-                        <!--<li class="nav__item"><a href="#" class="nav__link">Title</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">Title</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">Title</a></li>-->
+                        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                        <li id="profile" class="nav__item"><a href="http://localhost:1000/your_account.html" class="nav__link">Your Account</a></li>
+                        <li id="profile" class="nav__item"><a href="#" class="nav__link">Cart</a></li>
+                        <li id="sign-out" class="nav__item"><a href="#" class="nav__link">Sign out</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
 
-
-        <div class="banner_image">
-            <div class="banner_content">
-                <h1>Welcome to <span>COORGANICA</span>
-                </h1>
-                <i><p style="color: #00b29a;">a organic world a happy world</p></i>
-                <br/>
-                <p id="type_"></p>
+        <div class="main_item_div">
+          <% if(data.length){
+            for(var i = 0;i < data.length;i++) { %>
+            <div class="sub_item_div">
+              <div class="item">
+                <div class="item_image">
+                  <img src="<%=data[i].image%>" />
+                </div>
+                  <div class="item_details">
+                    <p><%=data[i].seller%></p>
+                    <p><%=data[i].title%></p>
+                    <p>₹<%=data[i].price%>.00</p>
+                  </div>
+              </div>
+              <div class="button">
+                <form action="/item/<%=data[i].id%>" method="post" name="id">
+                  <button type="submit" class="view">view more</button>
+                </form>
+                <form action="/cart/<%=data[i].id%>" method="post" name="id">
+                  <button class="cart">add to cart</button>
+                </form>
+              </div>
             </div>
+          <% }
+          }else{%>
+              <center><h1>No data</h1></center>    
+          <%} %>
         </div>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <footer class="footer_sec">
             <h4>Useful Links</h4>
             <div class="line_div"></div>
@@ -112,22 +132,8 @@
         </footer>
         <br/><br/><br/><br/><br/><br/>
         <!--===== MAIN JS =====-->
-        <script src="js/main.js"></script>
-
-
-        <script>
-            var i = 0;
-            var text = '....Daily quotes are here....';
-            var speed = 200;
-            
-            function typetext() {
-              if (i < text.length) {
-                document.getElementById("type_").innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typetext, speed);
-              }
-            }
-            typetext();
-        </script>
+        <script src="/js/main.js"></script>
+        <script src="/js/account.js"></script>
+        <script src="/dist/firebaseui.js"></script>
     </body>
 </html>
